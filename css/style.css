@@ -230,8 +230,8 @@ body {
 
 /* menu desktop */
 .desktop-menu{
-    background-color: (var(--white));
     position: absolute;
+    background-color: white;
     right: 60px;
     width: 120px;
     height: auto;
@@ -320,7 +320,7 @@ body {
 }
 .my-order-container h1{
     display: flex;
-    align-items: start;
+    align-items: end;
     margin-top: 16px;
 }
 .my-order-content{
@@ -501,9 +501,10 @@ nav{
 
 /* product detail */
 .product-detail{
-    width: 360px;
+    background-color: var(--white);
     position: absolute;
     right: 0px;
+    padding: 0 16px;
 }
 .product-detail-close{
     position: absolute;
@@ -557,6 +558,7 @@ nav{
 @media (max-width:640px){
     .product-detail{
         width: 100%;
+        padding: 0px;
     }
 }
     

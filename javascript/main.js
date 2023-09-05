@@ -3,6 +3,7 @@ const desktopMenu = document.querySelector('.desktop-menu')
 const navBurgerMenu = document.querySelector('.menu')
 const mobileMenu = document.querySelector('.mobile-menu')
 const navCarrito = document.querySelector('.navbar-shopping-cart')
+
 const shoppingCart = document.querySelector('.shopping-cart-container')
 
 navEmail.addEventListener('click', toggleDesktopMenu) 
@@ -27,6 +28,21 @@ function toggleShoppingCart() {
 
 const productList = [];
 
+productList.push({
+    name: 'Bike',
+    price: 120.,
+    image: "../img/product_yardSale/bike.jpg",
+})
+productList.push({
+    name: 'Bike',
+    price: 120.,
+    image: "../img/product_yardSale/bike.jpg",
+})
+productList.push({
+    name: 'Bike',
+    price: 120.,
+    image: "../img/product_yardSale/bike.jpg",
+})
 productList.push({
     name: 'Bike',
     price: 120.,
