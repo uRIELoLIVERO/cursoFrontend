@@ -317,6 +317,7 @@ body {
     display: grid;
     width: 300px;
     grid-template-rows: auto 1fr;
+    padding: 0 16px;
 }
 .my-order-container h1{
     display: flex;
@@ -503,8 +504,8 @@ nav{
 .product-detail{
     background-color: var(--white);
     position: absolute;
+    width: 300px;
     right: 0px;
-    padding: 0 16px;
 }
 .product-detail-close{
     position: absolute;
@@ -530,7 +531,7 @@ nav{
     border-radius: 0 0 20px 20px;
 }
 .product-detail-info{
-    margin: 24px 24px 0 24px;
+    margin: 8px 8px 0 8px;
 }
 .product-detail-info p:nth-child(1){
     margin-top: 0;

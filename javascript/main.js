@@ -3,27 +3,39 @@ const desktopMenu = document.querySelector('.desktop-menu')
 const navBurgerMenu = document.querySelector('.menu')
 const mobileMenu = document.querySelector('.mobile-menu')
 const navCarrito = document.querySelector('.navbar-shopping-cart')
-
 const shoppingCart = document.querySelector('.shopping-cart-container')
+
+const productDetail = document.querySelector('#productDetail')
+const productClose = document.querySelector('.product-detail-close')
 
 navEmail.addEventListener('click', toggleDesktopMenu) 
 navBurgerMenu.addEventListener('click', toggleMobileMenu)
 navCarrito.addEventListener('click', toggleShoppingCart)
+productClose.addEventListener('click', toggleProductDetail)
 
 function toggleDesktopMenu() {
     desktopMenu.classList.toggle('inactive')
     shoppingCart.classList.add('inactive')
+    productDetail.classList.add('inactive')
 }
 
 function toggleMobileMenu() {
     mobileMenu.classList.toggle('inactive')
     shoppingCart.classList.add('inactive')
+    productDetail.classList.add('inactive')
 }
 
 function toggleShoppingCart() {
     shoppingCart.classList.toggle('inactive')
     desktopMenu.classList.add('inactive')
     mobileMenu.classList.add('inactive')
+    productDetail.classList.add('inactive')
+}
+function toggleProductDetail() {
+    productDetail.classList.toggle('inactive')
+    desktopMenu.classList.add('inactive')
+    mobileMenu.classList.add('inactive')
+    shoppingCart.classList.add('inactive')
 }
 
 const productList = [];
@@ -67,6 +79,7 @@ for (product of productList){
     const img = document.createElement('img')
     img.classList.add('product-img')
     img.setAttribute('src', product.image)
+    img.addEventListener('click', toggleProductDetail)
 
     const productInfo = document.createElement('div')
     productInfo.classList.add('product-info')
